@@ -22,15 +22,15 @@ public class Mapa {
         return true;
     }
 
-    public void aplicarBonus(Ejercito ejercito) {
-        System.out.println("Aplicando bonus para el territorio: " + tipoTerritorio);
+    public String aplicarBonus(Ejercito ejercito) {
         for (Soldado soldado : ejercito.getSoldados()) {
             if (seBeneficiaDelTerritorio(ejercito.getNombreReino())) {
-                System.out.println(soldado.getNombre() + " recibe +1 de nivel de vida por el territorio.");
                 soldado.nivelVida += 1; 
             }
         }
+        return ejercito.getNombreReino();
     }
+    
 
     private boolean seBeneficiaDelTerritorio(String reino) {
         return switch (reino) {
