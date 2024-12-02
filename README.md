@@ -11,6 +11,6 @@ del 4to pilar de POO (Polimorfismo), pero agrega nuevamente la aplicación de bo
 El avance en este trabajo se baso en estos 4 puntos.
 
 1. Crear la clase padre Soldado y las clases hijas con características específicas.
-2. Generar los ejércitos y el mapa de batalla.
+2. Gestión de los ejercitos y generar mapa de batalla.
 3. Gestión del Mapa y Territorio
 4. Estadísticas y definición del ganador

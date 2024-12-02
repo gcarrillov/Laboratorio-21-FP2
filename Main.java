@@ -33,7 +33,7 @@ public class Main {
         }
 
         System.out.println("Mapa de batalla:");
-        mapa.mostrarTablero();
+        mapa.mostrarTablero(ejercito1, ejercito2);
         System.out.println("\nEjército 1:");
         ejercito1.mostrarEjercito();
         System.out.println("\nEjército 2:");
