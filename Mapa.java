@@ -1,42 +1,37 @@
-import java.util.Random;
-
+import java.util.*;
 public class Mapa {
     private String tipoTerritorio;
     private Soldado[][] tablero;
     private Random random;
 
-    // Constructor
     public Mapa(String tipoTerritorio) {
         this.tipoTerritorio = tipoTerritorio;
-        this.tablero = new Soldado[10][10]; // Tablero de 10x10
+        this.tablero = new Soldado[10][10]; 
         this.random = new Random();
     }
 
-    // Colocar un soldado en una posición libre del tablero
     public boolean colocarSoldado(Soldado soldado) {
         int fila, columna;
         do {
             fila = random.nextInt(10);
             columna = random.nextInt(10);
-        } while (tablero[fila][columna] != null); // Buscar posición libre
+        } while (tablero[fila][columna] != null); 
 
         tablero[fila][columna] = soldado;
         soldado.mover(fila, columna);
         return true;
     }
 
-    // Aplicar bonus a soldados según el territorio
     public void aplicarBonus(Ejercito ejercito) {
         System.out.println("Aplicando bonus para el territorio: " + tipoTerritorio);
         for (Soldado soldado : ejercito.getSoldados()) {
             if (seBeneficiaDelTerritorio(ejercito.getNombreReino())) {
                 System.out.println(soldado.getNombre() + " recibe +1 de nivel de vida por el territorio.");
-                soldado.nivelVida += 1; // Incrementa nivel de vida
+                soldado.nivelVida += 1; 
             }
         }
     }
 
-    // Verificar si un reino se beneficia del territorio
     private boolean seBeneficiaDelTerritorio(String reino) {
         return switch (reino) {
             case "Inglaterra", "Sacro Imperio Romano-Germánico" -> tipoTerritorio.equals("Bosque");
@@ -47,7 +42,6 @@ public class Mapa {
         };
     }
 
-    // Dibujar el tablero
     public void mostrarTablero() {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
@@ -61,7 +55,6 @@ public class Mapa {
         }
     }
 
-    // Getter del tipo de territorio
     public String getTipoTerritorio() {
         return tipoTerritorio;
     }

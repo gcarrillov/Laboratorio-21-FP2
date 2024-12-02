@@ -10,7 +10,7 @@ public class Arquero extends Soldado {
     public void accionEspecial() {
         if (flechasDisponibles > 0) {
             System.out.println(nombre + " dispara una flecha, aumentando temporalmente su ataque en 5.");
-            this.ataque += 5; // Incremento temporal de ataque
+            this.ataque += 5; 
             flechasDisponibles--;
         } else {
             System.out.println(nombre + " no tiene flechas disponibles.");
@@ -20,7 +20,7 @@ public class Arquero extends Soldado {
     @Override
     public void finalizarAccionEspecial() {
         System.out.println(nombre + " finaliza su ataque a distancia, regresando su ataque a la normalidad.");
-        this.ataque -= 5; // Reversión del incremento
+        this.ataque -= 5; 
     }
 
     @Override

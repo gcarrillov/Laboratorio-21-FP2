@@ -9,13 +9,13 @@ public class Espadachin extends Soldado {
     @Override
     public void accionEspecial() {
         System.out.println(nombre + " crea un muro de escudos, aumentando su defensa en 3 puntos.");
-        this.defensa += 3; // Incrementa la defensa temporalmente
+        this.defensa += 3; 
     }
 
     @Override
     public void finalizarAccionEspecial() {
         System.out.println(nombre + " baja el muro de escudos, regresando su defensa a la normalidad.");
-        this.defensa -= 3; // Reversión del incremento
+        this.defensa -= 3; 
     }
 
     @Override

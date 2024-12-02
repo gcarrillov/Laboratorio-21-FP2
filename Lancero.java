@@ -9,15 +9,15 @@ public class Lancero extends Soldado {
     @Override
     public void accionEspecial() {
         System.out.println(nombre + " forma un schiltrom, aumentando su defensa en 5 puntos y reduciendo su ataque en 2.");
-        this.defensa += 5; // Incrementa la defensa
-        this.ataque -= 2;  // Penalización de ataque
+        this.defensa += 5; 
+        this.ataque -= 2;  
     }
 
     @Override
     public void finalizarAccionEspecial() {
         System.out.println(nombre + " disuelve el schiltrom, regresando sus atributos a la normalidad.");
-        this.defensa -= 5; // Reversión del incremento
-        this.ataque += 2;  // Reversión de la penalización
+        this.defensa -= 5; 
+        this.ataque += 2;  
     }
 
     @Override

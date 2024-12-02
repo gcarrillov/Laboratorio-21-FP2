@@ -4,16 +4,16 @@ public class Caballero extends Soldado {
     public Caballero(String nombre, int nivelVida, int ataque, int defensa, int fila, int columna, boolean montado) {
         super(nombre, nivelVida, ataque, defensa, fila, columna);
         this.montado = montado;
-        ajustarAtributos(); // Ajusta los atributos según el estado inicial
+        ajustarAtributos(); 
     }
 
     private void ajustarAtributos() {
         if (montado) {
-            this.ataque += 5;  // Incremento de ataque al montar
-            this.defensa += 3; // Incremento de defensa al montar
+            this.ataque += 5;  
+            this.defensa += 3; 
         } else {
-            this.ataque -= 5;  // Reducción de ataque al desmontar
-            this.defensa -= 3; // Reducción de defensa al desmontar
+            this.ataque -= 5;  
+            this.defensa -= 3; 
         }
     }
 

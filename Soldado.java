@@ -6,7 +6,6 @@ public abstract class Soldado {
     protected int fila;
     protected int columna;
 
-    // Constructor
     public Soldado(String nombre, int nivelVida, int ataque, int defensa, int fila, int columna) {
         this.nombre = nombre;
         this.nivelVida = nivelVida;
@@ -16,7 +15,6 @@ public abstract class Soldado {
         this.columna = columna;
     }
 
-    // Métodos comunes
     public String getNombre() {
         return nombre;
     }
@@ -34,9 +32,9 @@ public abstract class Soldado {
         this.columna = nuevaColumna;
     }
 
-    public abstract void accionEspecial(); // Método polimórfico
+    public abstract void accionEspecial(); 
 
-    public abstract void finalizarAccionEspecial(); // Restablece los efectos de la acción especial
+    public abstract void finalizarAccionEspecial(); 
 
     @Override
     public String toString() {

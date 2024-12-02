@@ -1,27 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
+import java.util.*;
 public class Ejercito {
     private String nombreReino;
     private List<Soldado> soldados;
 
-    // Constructor
     public Ejercito(String nombreReino, boolean usarArrayList) {
         this.nombreReino = nombreReino;
         if (usarArrayList) {
             soldados = new ArrayList<>();
         } else {
-            soldados = new ArrayList<>(10); // Simula un arreglo estándar
+            soldados = new ArrayList<>(10); 
         }
     }
 
-    // Método para agregar soldados al ejército
     public void agregarSoldado(Soldado soldado) {
         soldados.add(soldado);
     }
 
-    // Generación automática de soldados
     public void generarSoldados(int cantidad) {
         Random random = new Random();
         for (int i = 0; i < cantidad; i++) {
@@ -36,7 +30,6 @@ public class Ejercito {
         }
     }
 
-    // Crear soldados según el tipo
     private Soldado crearSoldado(String tipo, int id, Random random) {
         String nombre = tipo + " " + nombreReino + " #" + id;
         int fila = random.nextInt(10);
@@ -50,12 +43,10 @@ public class Ejercito {
         };
     }
 
-    // Obtener todos los soldados
     public List<Soldado> getSoldados() {
         return soldados;
     }
 
-    // Mostrar detalles del ejército
     public void mostrarEjercito() {
         System.out.println("Reino: " + nombreReino);
         for (Soldado soldado : soldados) {
