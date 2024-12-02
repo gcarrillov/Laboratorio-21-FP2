@@ -5,6 +5,7 @@ public class Mapa {
     private Soldado[][] tablero;
     private Random random;
 
+    // Constructor
     public Mapa(String tipoTerritorio) {
         this.tipoTerritorio = tipoTerritorio;
         this.tablero = new Soldado[10][10]; // Tablero de 10x10
@@ -24,6 +25,28 @@ public class Mapa {
         return true;
     }
 
+    // Aplicar bonus a soldados según el territorio
+    public void aplicarBonus(Ejercito ejercito) {
+        System.out.println("Aplicando bonus para el territorio: " + tipoTerritorio);
+        for (Soldado soldado : ejercito.getSoldados()) {
+            if (seBeneficiaDelTerritorio(ejercito.getNombreReino())) {
+                System.out.println(soldado.getNombre() + " recibe +1 de nivel de vida por el territorio.");
+                soldado.nivelVida += 1; // Incrementa nivel de vida
+            }
+        }
+    }
+
+    // Verificar si un reino se beneficia del territorio
+    private boolean seBeneficiaDelTerritorio(String reino) {
+        return switch (reino) {
+            case "Inglaterra", "Sacro Imperio Romano-Germánico" -> tipoTerritorio.equals("Bosque");
+            case "Francia" -> tipoTerritorio.equals("Campo Abierto");
+            case "Castilla-Aragón" -> tipoTerritorio.equals("Montaña");
+            case "Moros" -> tipoTerritorio.equals("Desierto");
+            default -> false;
+        };
+    }
+
     // Dibujar el tablero
     public void mostrarTablero() {
         for (int i = 0; i < 10; i++) {
@@ -36,5 +59,10 @@ public class Mapa {
             }
             System.out.println();
         }
+    }
+
+    // Getter del tipo de territorio
+    public String getTipoTerritorio() {
+        return tipoTerritorio;
     }
 }

@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         // Crear dos ejércitos
-        Ejercito ejercito1 = new Ejercito("Inglaterra", false); // Usar arreglo estándar
-        Ejercito ejercito2 = new Ejercito("Francia", true);    // Usar ArrayList
+        Ejercito ejercito1 = new Ejercito("Inglaterra", false);
+        Ejercito ejercito2 = new Ejercito("Francia", true);
 
         // Generar soldados
         ejercito1.generarSoldados(10);
@@ -10,6 +10,10 @@ public class Main {
 
         // Crear el mapa
         Mapa mapa = new Mapa("Bosque");
+
+        // Aplicar bonus a los soldados según el territorio
+        mapa.aplicarBonus(ejercito1);
+        mapa.aplicarBonus(ejercito2);
 
         // Colocar soldados en el mapa
         for (Soldado soldado : ejercito1.getSoldados()) {

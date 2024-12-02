@@ -62,4 +62,8 @@ public class Ejercito {
             System.out.println(soldado);
         }
     }
+
+    public String getNombreReino() {
+        return nombreReino;
+    }
 }
