@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Ejercito {
     private String nombreReino;
     private List<Soldado> soldados;
@@ -104,12 +105,26 @@ public class Ejercito {
                 .max(Comparator.comparingInt(Soldado::getNivelVida))
                 .orElse(null);
     }
-
-    public List<Soldado> rankingDePoder() {
-        return soldados.stream()
-                .sorted(Comparator.comparingInt(Soldado::getNivelVida).reversed())
-                .toList();
+    
+    public void ordenarPorVida() {
+        Collections.sort(soldados, new ComparadorPorVida());
     }
+
+    public void rankingDePoder() {
+        ordenarPorVida(); 
+
+        Soldado soldadoMasFuerte = soldados.get(0); 
+        Soldado soldadoMasDebil = soldados.get(soldados.size() - 1);
+
+        System.out.println("Ranking de Poder de los Soldados en el ejercito de " + nombreReino + ":");
+        for (Soldado s : soldados) {
+            System.out.println(s.getNombre() + " - Vida: " + s.getNivelVida());
+        }
+
+        System.out.println("\nSoldado mas fuerte: " + soldadoMasFuerte.getNombre() + " con " + soldadoMasFuerte.getNivelVida() + " de vida");
+        System.out.println("Soldado mas debil: " + soldadoMasDebil.getNombre() + " con " + soldadoMasDebil.getNivelVida() + " de vida");
+    }
+    
 
     public int nivelVidaTotal() {
         return soldados.stream()

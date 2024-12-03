@@ -6,7 +6,7 @@ public class Mapa {
 
     public Mapa(String tipoTerritorio) {
         this.tipoTerritorio = tipoTerritorio;
-        this.tablero = new Soldado[10][10]; 
+        this.tablero = new Soldado[10][10];
         this.random = new Random();
     }
 
@@ -34,8 +34,7 @@ public class Mapa {
 
     private boolean seBeneficiaDelTerritorio(String reino) {
         return switch (reino) {
-            case "Inglaterra"-> tipoTerritorio.equals("Bosque");
-            case "Sacro Imperio Romano-Germánico" -> tipoTerritorio.equals("Bosque") || tipoTerritorio.equals("Playa") || tipoTerritorio.equals("Campo Abierto");
+            case "Inglaterra", "Sacro Imperio Romano-Germanico" -> tipoTerritorio.equals("Bosque");
             case "Francia" -> tipoTerritorio.equals("Campo Abierto");
             case "Castilla-Aragón" -> tipoTerritorio.equals("Montaña");
             case "Moros" -> tipoTerritorio.equals("Desierto");
@@ -69,24 +68,5 @@ public class Mapa {
     
     public String getTipoTerritorio() {
         return tipoTerritorio;
-    }
-    
-    public static String crearTerreno(){
-        Random r = new Random();
-        switch (r.nextInt(4)+1){
-            case 1:
-                return "Bosque";
-            case 2:
-                return "Campo Abierto";
-            case 3:
-                return "Montaña";
-            case 4:
-                return "Desierto";
-            case 5:
-                return "Playa";
-            default:
-                break;
-        }
-        return "";
     }
 }
