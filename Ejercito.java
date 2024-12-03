@@ -116,4 +116,23 @@ public class Ejercito {
                 .mapToInt(Soldado::getNivelVida)
                 .sum();
     }
+    
+    public static String crearReino(){
+        Random r = new Random();
+        switch (r.nextInt(5)+1){
+            case 1:
+                return "Inglaterra";
+            case 2:
+                return "Francia";
+            case 3:
+                return "Castilla-Aragon";
+            case 4:
+                return "Moros";
+            case 5:
+                return "Sacro Imperio Romano-Germanico";
+            default:
+                break;
+        }
+        return "";
+    }
 }

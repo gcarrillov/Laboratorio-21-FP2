@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Ejercito ejercito1 = new Ejercito("Inglaterra", false);
-        Ejercito ejercito2 = new Ejercito("Francia", true);
+        Ejercito ejercito1 = new Ejercito(Ejercito.crearReino(), false);
+        Ejercito ejercito2 = new Ejercito(Ejercito.crearReino(), true);
 
         ejercito1.generarSoldados(10);
         ejercito2.generarSoldados(10);
@@ -34,7 +34,9 @@ public class Main {
 
         System.out.println("Mapa de batalla:");
         mapa.mostrarTablero(ejercito1, ejercito2);
-        System.out.println("\n El mapa se ha generado como: " + mapa.getTipoTerritorio());
+        System.out.println("\n------------------------------------------");
+        System.out.println("| El mapa se ha generado como: " + mapa.getTipoTerritorio() + " |");
+        System.out.println("------------------------------------------");
         System.out.println("\nEjercito 1:");
         ejercito1.mostrarEjercito();
         System.out.println("\nEjercito 2:");

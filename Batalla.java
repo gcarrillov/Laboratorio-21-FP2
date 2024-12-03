@@ -2,13 +2,13 @@ import java.util.Random;
 
 public class Batalla {
     public static void mostrarResultado(Ejercito ejercito1, Ejercito ejercito2) {
-        System.out.println("--------------------------");
-        System.out.println("|Probabilidad de victoria|");
-        System.out.println("--------------------------");
-        System.out.println("|" + ejercito1.getNombreReino() + "| VS |" + ejercito2.getNombreReino() + "|");
-        System.out.println("--------------------------");
-        System.out.println("|   " + calcularProb(ejercito1,ejercito2)+ "%  |   " + calcularProb(ejercito2,ejercito1) + "%    |");
-        System.out.println("--------------------------");
+        System.out.println("---------------------------------");
+        System.out.println("|   Probabilidad de victoria    |");
+        System.out.println("---------------------------------");
+        System.out.println("| " + ejercito1.getNombreReino() + " | VS | " + ejercito2.getNombreReino() + " |");
+        System.out.println("---------------------------------");
+        System.out.println("|    " + calcularProb(ejercito1,ejercito2)+ "%     |     " + calcularProb(ejercito2,ejercito1) + "%    |");
+        System.out.println("---------------------------------");
 
         Random random = new Random();
         double resultado = random.nextDouble() * 100;
