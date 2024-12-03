@@ -38,7 +38,7 @@ public abstract class Soldado {
 
     @Override
     public String toString() {
-        return String.format("Soldado: %s, Vida: %d, Ataque: %d, Defensa: %d, Posición: (%d, %d)",
+        return String.format("Soldado: %s, Vida: %d, Ataque: %d, Defensa: %d, Posicion: (%d, %d)",
                               nombre, nivelVida, ataque, defensa, fila, columna);
     }
 }

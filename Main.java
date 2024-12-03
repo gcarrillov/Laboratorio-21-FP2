@@ -11,18 +11,18 @@ public class Main {
         mapa.aplicarBonus(ejercito1);
         mapa.aplicarBonus(ejercito2);
 
-        System.out.println("\nEstadísticas del Ejército 1:");
+        System.out.println("\nEstadisticas del Ejercito 1:");
         System.out.println("Promedio de nivel de vida: " + ejercito1.promedioNivelVida());
         System.out.println("Soldado con mayor nivel de vida: " + ejercito1.soldadoMayorVida());
 
-        System.out.println("\nEstadísticas del Ejército 2:");
+        System.out.println("\nEstadisticas del Ejercito 2:");
         System.out.println("Promedio de nivel de vida: " + ejercito2.promedioNivelVida());
         System.out.println("Soldado con mayor nivel de vida: " + ejercito2.soldadoMayorVida());
 
-        System.out.println("\nRanking de poder del Ejército 1:");
+        System.out.println("\nRanking de poder del Ejercito 1:");
         ejercito1.rankingDePoder().forEach(System.out::println);
 
-        System.out.println("\nRanking de poder del Ejército 2:");
+        System.out.println("\nRanking de poder del Ejercito 2:");
         ejercito2.rankingDePoder().forEach(System.out::println);
 
         for (Soldado soldado : ejercito1.getSoldados()) {
@@ -34,12 +34,12 @@ public class Main {
 
         System.out.println("Mapa de batalla:");
         mapa.mostrarTablero(ejercito1, ejercito2);
-        System.out.println("\nEjército 1:");
+        System.out.println("\nEjercito 1:");
         ejercito1.mostrarEjercito();
-        System.out.println("\nEjército 2:");
+        System.out.println("\nEjercito 2:");
         ejercito2.mostrarEjercito();
 
         System.out.println("\nResultado del combate:");
-        Batalla.calcularResultado(ejercito1, ejercito2);
+        Batalla.mostrarResultado(ejercito1, ejercito2);
     }
 }

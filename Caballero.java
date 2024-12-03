@@ -61,6 +61,6 @@ public class Caballero extends Soldado {
 
     @Override
     public String toString() {
-        return super.toString() + String.format(", Montado: %s", montado ? "Sí" : "No");
+        return super.toString() + String.format(", Montado: %s", montado ? "Si" : "No");
     }
 }
