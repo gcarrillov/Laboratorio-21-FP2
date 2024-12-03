@@ -34,7 +34,8 @@ public class Mapa {
 
     private boolean seBeneficiaDelTerritorio(String reino) {
         return switch (reino) {
-            case "Inglaterra", "Sacro Imperio Romano-Germánico" -> tipoTerritorio.equals("Bosque");
+            case "Inglaterra"-> tipoTerritorio.equals("Bosque");
+            case "Sacro Imperio Romano-Germánico" -> tipoTerritorio.equals("Bosque") || tipoTerritorio.equals("Playa") || tipoTerritorio.equals("Campo Abierto");
             case "Francia" -> tipoTerritorio.equals("Campo Abierto");
             case "Castilla-Aragón" -> tipoTerritorio.equals("Montaña");
             case "Moros" -> tipoTerritorio.equals("Desierto");
@@ -81,6 +82,8 @@ public class Mapa {
                 return "Montaña";
             case 4:
                 return "Desierto";
+            case 5:
+                return "Playa";
             default:
                 break;
         }
