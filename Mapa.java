@@ -69,4 +69,21 @@ public class Mapa {
     public String getTipoTerritorio() {
         return tipoTerritorio;
     }
+    
+    public static String crearTerreno(){
+        Random r = new Random();
+        switch (r.nextInt(4)+1){
+            case 1:
+                return "Bosque";
+            case 2:
+                return "Campo Abierto";
+            case 3:
+                return "Montaña";
+            case 4:
+                return "Desierto";
+            default:
+                break;
+        }
+        return "";
+    }
 }

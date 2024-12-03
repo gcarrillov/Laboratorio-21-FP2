@@ -5,8 +5,8 @@ public class Main {
 
         ejercito1.generarSoldados(10);
         ejercito2.generarSoldados(10);
-
-        Mapa mapa = new Mapa("Bosque");
+        
+        Mapa mapa = new Mapa(Mapa.crearTerreno());
 
         mapa.aplicarBonus(ejercito1);
         mapa.aplicarBonus(ejercito2);
@@ -34,6 +34,7 @@ public class Main {
 
         System.out.println("Mapa de batalla:");
         mapa.mostrarTablero(ejercito1, ejercito2);
+        System.out.println("\n El mapa se ha generado como: " + mapa.getTipoTerritorio());
         System.out.println("\nEjercito 1:");
         ejercito1.mostrarEjercito();
         System.out.println("\nEjercito 2:");
