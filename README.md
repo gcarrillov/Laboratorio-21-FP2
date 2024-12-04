@@ -3,6 +3,8 @@ Este trabajo es realizado por los estudiantes:
 - Fredy Aragón
 - Gustavo Carrillo
 - Giovanni Mejía
+- Mark Hancco
+
 
 Este trabajo es del laboratorio 21 (Herencia y Polimorfismo 2), es bien similar al laboratorio 20 sobre la implementación
 del 4to pilar de POO (Polimorfismo), pero agrega nuevamente la aplicación de bonus por tipo de territorio que se presente en el mapa
