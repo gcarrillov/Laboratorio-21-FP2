@@ -9,7 +9,7 @@ public class Arquero extends Soldado {
     @Override
     public void accionEspecial() {
         if (flechasDisponibles > 0) {
-            System.out.println(nombre + " dispara una flecha, aumentando temporalmente su ataque en 5.");
+            System.out.println(nombre + "12354.");
             this.ataque += 5; 
             flechasDisponibles--;
         } else {
